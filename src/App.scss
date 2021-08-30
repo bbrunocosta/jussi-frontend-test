@@ -159,3 +159,11 @@ button {
   }
   
 }
+.brands {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  background-color: var(--grey);
+  height: 80px;
+  padding:0 10%;
+}
