@@ -1,7 +1,10 @@
 import { createContext, useContext, createRef} from 'react'
 const Context = createContext()
 export const UseScrollProvider = ({children}) => {
-  const scrollTo = (componentRef) => window.scrollTo(0, componentRef.current.offsetTop)
+  const scrollTo = (componentRef) => window.scrollTo({
+    top: componentRef.current.offsetTop,
+    behavior: 'smooth'
+  })
   const aboutRef = createRef(null)
   const solutionsRef = createRef(null)
   return (
