@@ -12,12 +12,14 @@ function App() {
   return (
     <>
       <Header/>
-      <Breadcrum/>
-      <Brands/>
-      <Solutions/>
-      <About/>
-      <CallAction/>
-      <KeepInTouch/>
+      <main>
+        <Breadcrum/>
+        <Brands/>
+        <Solutions/>
+        <About/>
+        <CallAction/>
+        <KeepInTouch/>
+      </main>
       <Footer/>
     </>
   );

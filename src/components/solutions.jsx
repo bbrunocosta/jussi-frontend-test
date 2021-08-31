@@ -55,8 +55,11 @@ const Solutions = () => {
     }
   ]
   return (
-    <div className="solutions">
+    <section className="solutions">
+      {
+      // eslint-disable-next-line
       <h2><span>//</span> NOSSAS SOLUÇÕES</h2>
+      }
       <Slider>
         {
           solutions.map(solution => 
@@ -71,7 +74,7 @@ const Solutions = () => {
           
         }
       </Slider>
-    </div>
+    </section>
   )
 }
 export default Solutions
