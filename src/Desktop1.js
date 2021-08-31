@@ -1,4 +1,3 @@
-import './App.scss';
 import Header from './components/header'
 import Breadcrum from './components/breadcrum'
 import Brands from './components/brands'
@@ -7,9 +6,9 @@ import About from './components/about'
 import CallAction from './components/call-action'
 import KeepInTouch from './components/keep-in-touch'
 import Footer from './components/footer'
-import { UseScrollProvider} from './hooks/useScroll'
+import { UseScrollProvider } from './hooks/useScroll'
 
-function App() {
+function Desktop1() {
   return (
     <UseScrollProvider>
       <Header/>
@@ -25,4 +24,4 @@ function App() {
     </UseScrollProvider>
   );
 }
-  export default App;
+  export default Desktop1;

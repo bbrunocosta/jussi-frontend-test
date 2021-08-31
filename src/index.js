@@ -1,10 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './App';
-
+import Desktop1 from './Desktop1';
+import './styles.scss'
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <Desktop1 />
   </React.StrictMode>,
   document.getElementById('root')
 );
