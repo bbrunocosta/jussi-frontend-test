@@ -5,6 +5,7 @@ import Brands from './components/brands'
 import Solutions from './components/solutions'
 import About from './components/about'
 import CallAction from './components/call-action'
+import KeepInTouch from './components/keep-in-touch'
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
       <Solutions/>
       <About/>
       <CallAction/>
+      <KeepInTouch/>
     </>
   );
 }
