@@ -61,6 +61,7 @@ const Solutions = () => {
         {
           solutions.map(solution => 
             <Product 
+              key={solution.name}
               avatar={solution.avatar}
               name={solution.name}
               description={solution.description}
