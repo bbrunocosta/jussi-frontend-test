@@ -6,6 +6,7 @@ import Solutions from './components/solutions'
 import About from './components/about'
 import CallAction from './components/call-action'
 import KeepInTouch from './components/keep-in-touch'
+import Footer from './components/footer'
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
       <About/>
       <CallAction/>
       <KeepInTouch/>
+      <Footer/>
     </>
   );
 }
