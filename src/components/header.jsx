@@ -1,11 +1,15 @@
 import useScroll from '../hooks/useScroll'
 import { useState } from 'react'
+
+
 const HeaderLeft = () => {
   const { scrollTo, aboutRef, solutionsRef } = useScroll()
   
+  const openJussiWebsite = e =>window.open('https://jussi.com.br/')
+
   return (
     <div className="header-left">
-      <img src="/assets/svgs/logo-jussi-vector-green.svg" alt="Jussi logo" onClick={e=>window.open('https://jussi.com.br/')}/>
+      <img src="/assets/svgs/logo-jussi-vector-green.svg" alt="Jussi logo" onClick={openJussiWebsite}/>
       <nav>
         <menu>
           <button onClick={e=>scrollTo(solutionsRef)}>
@@ -19,10 +23,18 @@ const HeaderLeft = () => {
     </div>
   )
 }
+
+
 const HeaderRight = () => {
+
   const [cep, setCep] = useState('')
   const [ address, setAddress ] = useState(null)
 
+  const parseJson = httpResponse => httpResponse.json()
+  const alertError = err => alert('Enderço não encontrado! O CEP está correto?')
+  const isVaidCepString = cep => /[0-9]{5}-*[\d]{3}/.test(cep)
+  const handleInputChange = e => setCep(e.target.value)
+  const handleAdressClick = e => setAddress(null)
   const handleSeatch = e => {
     if(isVaidCepString(cep))
       fetch(`https://viacep.com.br/ws/${cep}/json`)
@@ -32,11 +44,6 @@ const HeaderRight = () => {
     else
       alert('CEP invalido! digite um CEP com esse formato xxxxxxxx ou xxxxx-xxx')    
   }
-  const parseJson = httpResponse => httpResponse.json()
-  const alertError = err => alert('Enderço não encontrado! O CEP está correto?')
-  const isVaidCepString = cep => /[0-9]{5}-*[\d]{3}/.test(cep)
-  const handleInputChange = e => setCep(e.target.value)
-  const handleAdressClick = e => setAddress(null)
 
   const  Search = !address&&
                     <div className="search">
@@ -52,14 +59,21 @@ const HeaderRight = () => {
                         {address.logradouro}, {address.bairro}, {address.localidade}-{address.uf}
                       </h4>
                     </div>
+
+    
+  const LoginButton = <button onClick={e=>alert('Esta ação ainda não implementada!')}> Login </button>
+
+  const CartButton = <button onClick={e=>alert('Esta ação ainda não implementada!')}>
+                        <img src="/assets/svgs/shopping-cart.svg" alt="" title="carrinho de compras"/>
+                    </button>
+
+
   return (
     <div className="header-right">
       { Search }
       { Address }
-    <button onClick={e=>alert('Esta ação ainda não implementada!')}> Login </button>
-    <button onClick={e=>alert('Esta ação ainda não implementada!')}>
-      <img src="/assets/svgs/shopping-cart.svg" alt="" title="carrinho de compras"/>
-    </button>
+      { LoginButton }
+      { CartButton }
   </div>
   )
 }

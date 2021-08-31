@@ -1,4 +1,6 @@
 import useScroll from '../hooks/useScroll'
+
+
 const ProductCard = ({img, action, alt}) => {
   return (
     <div className="product-card">
@@ -9,6 +11,8 @@ const ProductCard = ({img, action, alt}) => {
     </div>
   )
 }
+
+
 const ProductCardGroup = () => {
   return (
     <div className="product-card-group">
@@ -18,19 +22,29 @@ const ProductCardGroup = () => {
     </div>
   )
 }
+
+
 const Breadcrum = () => {
+
   const {scrollTo, solutionsRef} = useScroll()
+
   return (
+
     <section className="breadcrum">
+
       <article className="breadcrum-left">
         <h1>CRIAMOS LOJAS QUE VENDEM MAIS.</h1>
         <p>A Jüssi é especialista na criação de lojas usando a plataforma VTEX. Precisa criar sua loja ou migrar de plataforma?</p>
         <button onClick={e=>scrollTo(solutionsRef)}>Veja nossas soluções</button>
       </article>
+
       <div className="breadcrum-right">
           <ProductCardGroup/>
       </div>
+
     </section>
+
   )
 }
+
 export default Breadcrum

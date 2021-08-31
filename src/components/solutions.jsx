@@ -7,6 +7,8 @@ const Slider = ({children}) => {
     </ul>
   )
 }
+
+
 const Product = ({name, description, avatar, features}) => {
   return (
     <div className="product">
@@ -24,7 +26,12 @@ const Product = ({name, description, avatar, features}) => {
     </div>
   )
 }
+
+
 const Solutions = (props) => {
+
+  const { solutionsRef } = useScroll()
+
   const solutions = [
     {
       
@@ -55,13 +62,12 @@ const Solutions = (props) => {
       features: ['Feature 1', 'Feature 2', 'Feature 3']
     }
   ]
-  const { solutionsRef } = useScroll()
+
   return (
     <section className="solutions" ref={solutionsRef}>
-      {
-      // eslint-disable-next-line
+
       <h2><span>//</span> NOSSAS SOLUÇÕES</h2>
-      }
+      
       <Slider>
         {
           solutions.map(solution => 
