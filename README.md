@@ -24,7 +24,7 @@ In orther to get the adresss, just type a valid CEP in the Search Input then cli
 
 # Page visualization
 
-You can see the my test result on [this link](https://brunocosta.vercel.app/jussi-frontend-test)
+You can see the my test result on [this link](https://jussi-frontend-test.vercel.app/)
 
 
 # Running this project on localhost
