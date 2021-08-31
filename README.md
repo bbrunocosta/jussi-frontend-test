@@ -9,8 +9,11 @@ This project is a transpile of a figma design into real React web page with Sass
 ## Assets
  - [Figma Design](https://www.figma.com/file/O9AEeYB6ZWyMTZzMZhvjaY/loja-vtex-jussi?node-id=0%3A1)
 
+###### ATTENTION: AS THE ASSET GIVEN DOES NOT SUPPORT RESPONSIVE LAYOUTS I DECIDED FOR NOT IMPLMENT IT BY MY WAY SO THE RESULT OF THIS WORK ONLY WORKS PROPERLY IN DESKTOP SCREENS.
 
-## Development of the API request for Search field
+I have decide it for  a simple one reason: They wanted to test if I was able to implement a given layout. So if I implement a responsive screen, and as by default it was not given,  any decision I would make would turn the result  on a totally different layout. and  not the one  they gave me to implement.
+
+## Development of the API request for Search field.
 On this project I have use the Address Search API by CEP provided by [Viacep](https://viacep.com.br/)
 
 In orther to get the adresss, just type a valid CEP in the Search Input then click in the search icon.
