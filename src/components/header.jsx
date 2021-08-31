@@ -1,6 +1,6 @@
-const HeaderRight = () => {
+const HeaderLeft = () => {
   return (
-    <div className="header-right">
+    <div className="header-left">
       <img src="/assets/svgs/logo-jussi-vector-green.svg" alt="Jussi logo" />
       <nav>
         <menu>
@@ -11,9 +11,9 @@ const HeaderRight = () => {
     </div>
   )
 }
-const HeaderLeft = () => {
+const HeaderRight = () => {
   return (
-    <div className="header-left">
+    <div className="header-right">
     <div className="search">
       <input type="text" placeholder="Buscar"/>
       <button>
@@ -30,8 +30,8 @@ const HeaderLeft = () => {
 const Header = () => {
   return (
       <header className="header">
-        <HeaderRight/>
         <HeaderLeft/>
+        <HeaderRight/>
       </header>
   )
 }
