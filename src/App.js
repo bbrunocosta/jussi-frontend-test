@@ -2,6 +2,7 @@ import './App.scss';
 import Header from './components/header'
 import Breadcrum from './components/breadcrum'
 import Brands from './components/brands'
+import Solutions from './components/solutions'
 
 function App() {
   return (
@@ -9,6 +10,7 @@ function App() {
       <Header/>
       <Breadcrum/>
       <Brands/>
+      <Solutions/>
     </>
   );
 }
