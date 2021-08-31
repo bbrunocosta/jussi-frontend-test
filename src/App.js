@@ -3,6 +3,7 @@ import Header from './components/header'
 import Breadcrum from './components/breadcrum'
 import Brands from './components/brands'
 import Solutions from './components/solutions'
+import About from './components/about'
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
       <Breadcrum/>
       <Brands/>
       <Solutions/>
+      <About/>
     </>
   );
 }
