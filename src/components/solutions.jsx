@@ -1,3 +1,4 @@
+import useScroll from "../hooks/useScroll"
 
 const Slider = ({children}) => {
   return (
@@ -18,12 +19,12 @@ const Product = ({name, description, avatar, features}) => {
             features.map(feature=><li key={feature}>{feature}</li>)
           }
         </ul>
-        <button>Ver solução</button>
+        <button onClick={e=>alert('Esta ação ainda não implementada!')}>Ver solução</button>
       </div>
     </div>
   )
 }
-const Solutions = () => {
+const Solutions = (props) => {
   const solutions = [
     {
       
@@ -54,8 +55,9 @@ const Solutions = () => {
       features: ['Feature 1', 'Feature 2', 'Feature 3']
     }
   ]
+  const { solutionsRef } = useScroll()
   return (
-    <section className="solutions">
+    <section className="solutions" ref={solutionsRef}>
       {
       // eslint-disable-next-line
       <h2><span>//</span> NOSSAS SOLUÇÕES</h2>
